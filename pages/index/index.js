@@ -4,51 +4,67 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
-  },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
-  },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
+    array: [{
+      id: 1,
+      name: "手机",
+      pic: "https://g-search2.alicdn.com/img/bao/uploaded/i4/i2/2838892713/O1CN01SH5sRm1Vub4F9YYKr_!!0-item_pic.jpg_460x460Q90.jpg_.webp",
+      price: "2999.00",
+      sale: "11",
+      subtitle: "【新品开售】【买赠好礼】Huawei/华为nova 5 Pro超级夜景4800万AI四摄新品开售】【买赠好礼】Huawei/华为nova 5 Pro超级夜景4800万AI四摄新品开售】【买赠好礼】Huawei/华为nova 5 Pro超级夜景4800万AI四摄"
+
+    }, {
+      id: 1,
+      name: "手机",
+      pic: "https://g-search2.alicdn.com/img/bao/uploaded/i4/i1/883737303/O1CN010uAb9F23op0dAwuWC_!!0-item_pic.jpg_460x460Q90.jpg_.webp",
+      price: "1299.00",
+      sale: "22",
+      subtitle: "【64G直降100】Huawei/华为 畅享9 Plus 全面屏超清大屏四摄学生智能手"
+
+    }, {
+      id: 1,
+      name: "手机",
+      pic: "https://g-search3.alicdn.com/img/bao/uploaded/i4/i1/1714128138/O1CN01aMo4Jg29zFitT87kF_!!0-item_pic.jpg_460x460Q90.jpg_.webp",
+      price: "33445.67",
+      sale: "33",
+      subtitle: "【荣耀新品】华为HONOR荣耀20全面屏超广角AI四摄麒麟980芯片智能手"
+    }, {
+      id: 1,
+      name: "手机",
+      pic: "https://g-search3.alicdn.com/img/bao/uploaded/i4/i1/1714128138/O1CN01aMo4Jg29zFitT87kF_!!0-item_pic.jpg_460x460Q90.jpg_.webp",
+      price: "44.56",
+      sale: "44",
+      subtitle: "【6期分期免息】Huawei/华为 P30全面屏超感光徕卡三摄变焦双景录像980"
+    }, {
+      id: 1,
+      name: "手机",
+      pic: "https://g-search3.alicdn.com/img/bao/uploaded/i4/i1/1714128138/O1CN01aMo4Jg29zFitT87kF_!!0-item_pic.jpg_460x460Q90.jpg_.webp",
+      price: "11.23",
+      sale: "55",
+      subtitle: "【优惠高达300元】华为HONOR/荣耀 荣耀20i 3200万AI自拍照渐变色手机"
+    }, {
+      id: 1,
+      name: "手机",
+      pic: "https://g-search2.alicdn.com/img/bao/uploaded/i4/i2/2838892713/O1CN01SH5sRm1Vub4F9YYKr_!!0-item_pic.jpg_460x460Q90.jpg_.webp",
+      price: "2999.00",
+      sale: "11",
+      subtitle: "【新品开售】【买赠好礼】Huawei/华为nova 5 Pro超级夜景4800万AI四摄新品开售】【买赠好礼】Huawei/华为nova 5 Pro超级夜景4800万AI四摄新品开售】【买赠好礼】Huawei/华为nova 5 Pro超级夜景4800万AI四摄"
+
+    }, {
+      id: 1,
+      name: "手机",
+      pic: "https://g-search2.alicdn.com/img/bao/uploaded/i4/i2/2838892713/O1CN01SH5sRm1Vub4F9YYKr_!!0-item_pic.jpg_460x460Q90.jpg_.webp",
+      price: "2999.00",
+      sale: "11",
+      subtitle: "【新品开售】【买赠好礼】Huawei/华为nova 5 Pro超级夜景4800万AI四摄新品开售】【买赠好礼】Huawei/华为nova 5 Pro超级夜景4800万AI四摄新品开售】【买赠好礼】Huawei/华为nova 5 Pro超级夜景4800万AI四摄"
+
+    }, {
+      id: 1,
+      name: "手机",
+      pic: "https://g-search2.alicdn.com/img/bao/uploaded/i4/i2/2838892713/O1CN01SH5sRm1Vub4F9YYKr_!!0-item_pic.jpg_460x460Q90.jpg_.webp",
+      price: "2999.00",
+      sale: "11",
+      subtitle: "【新品开售】【买赠好礼】Huawei/华为nova 5 Pro超级夜景4800万AI四摄新品开售】【买赠好礼】Huawei/华为nova 5 Pro超级夜景4800万AI四摄新品开售】【买赠好礼】Huawei/华为nova 5 Pro超级夜景4800万AI四摄"
+
+    }]
   }
 })
