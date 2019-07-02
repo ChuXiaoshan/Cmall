@@ -1,7 +1,11 @@
 <!--index.wxml-->
-<scroll-view>
-  <view class="item_goods" wx:for="{{array}}">
-  <image class="image_goods_pic" src="{{item.pic}}"/>
-    <text class="text_subtitle">{{index}}: {{item.subtitle}}</text>
-</view>
+<scroll-view class="scroll-view-goods">
+  <view class="item-goods" wx:for="{{array}}">
+    <image class="image-goods-pic" src="{{item.pic}}" />
+    <view class="right-view">
+      <text class="text-subtitle">{{item.subtitle}}</text>
+      <text class="text-price">¥{{item.price}}</text>
+      <text class="text-store">华为官方旗舰店</text>
+    </view>
+  </view>
 </scroll-view>
