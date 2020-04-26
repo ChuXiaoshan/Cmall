@@ -1,0 +1,13 @@
+.item-home {
+  padding: 16rpx;
+  border-bottom: 1.5rpx solid #eee;
+}
+.text-author {
+  font-size: 24rpx;
+  color: #999999;
+}
+.text-date {
+  font-size: 24rpx;
+  color: #999999;
+  float: right;
+}

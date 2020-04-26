@@ -1,0 +1,11 @@
+<view class="container">
+	<scroll-view>
+		<view class="item-home" wx:for="{{list}}" wx:key="item">
+			<text class="text-title">{{item.title}}</text>
+			<view class="home-item-bottom">
+				<text class="text-author">{{item.shareUser}}</text>
+				<text class="text-date">{{item.niceShareDate}}</text>
+			</view>
+		</view>
+	</scroll-view>
+</view>

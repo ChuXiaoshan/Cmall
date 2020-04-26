@@ -1,4 +1,3 @@
-<!--index.wxml-->
 <scroll-view class="scroll-view-goods">
   <view class="item-goods" wx:for="{{array}}">
     <image class="image-goods-pic" src="{{item.pic}}" />

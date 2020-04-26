@@ -1,7 +1,4 @@
-//index.js
-//获取应用实例
 const app = getApp()
-
 Page({
   data: {
     array: [{
@@ -11,7 +8,6 @@ Page({
       price: "2999.00",
       sale: "11",
       subtitle: "【新品开售】【买赠好礼】Huawei/华为nova 5 Pro超级夜景4800万AI四摄新品开售】【买赠好礼】Huawei/华为nova 5 Pro超级夜景4800万AI四摄新品开售】【买赠好礼】Huawei/华为nova 5 Pro超级夜景4800万AI四摄"
-
     }, {
       id: 1,
       name: "手机",
@@ -19,7 +15,6 @@ Page({
       price: "1299.00",
       sale: "22",
       subtitle: "【64G直降100】Huawei/华为 畅享9 Plus 全面屏超清大屏四摄学生智能手"
-
     }, {
       id: 1,
       name: "手机",
@@ -48,7 +43,6 @@ Page({
       price: "2999.00",
       sale: "11",
       subtitle: "【新品开售】【买赠好礼】Huawei/华为nova 5 Pro超级夜景4800万AI四摄新品开售】【买赠好礼】Huawei/华为nova 5 Pro超级夜景4800万AI四摄新品开售】【买赠好礼】Huawei/华为nova 5 Pro超级夜景4800万AI四摄"
-
     }, {
       id: 1,
       name: "手机",
@@ -56,7 +50,6 @@ Page({
       price: "2999.00",
       sale: "11",
       subtitle: "【新品开售】【买赠好礼】Huawei/华为nova 5 Pro超级夜景4800万AI四摄新品开售】【买赠好礼】Huawei/华为nova 5 Pro超级夜景4800万AI四摄新品开售】【买赠好礼】Huawei/华为nova 5 Pro超级夜景4800万AI四摄"
-
     }, {
       id: 1,
       name: "手机",
@@ -64,7 +57,6 @@ Page({
       price: "2999.00",
       sale: "11",
       subtitle: "【新品开售】【买赠好礼】Huawei/华为nova 5 Pro超级夜景4800万AI四摄新品开售】【买赠好礼】Huawei/华为nova 5 Pro超级夜景4800万AI四摄新品开售】【买赠好礼】Huawei/华为nova 5 Pro超级夜景4800万AI四摄"
-
     }]
   }
 })
