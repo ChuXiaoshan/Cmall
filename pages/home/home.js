@@ -1,13 +1,29 @@
-const homeUrl = 'https://www.wanandroid.com/article/list/0/json'
+const homeUrl = 'https://www.wanandroid.com/article/list'
 const duration = 2000
 
 Page({
 
-  onLoad: function (options) {
-    this.makeRequest()
+  data: {
+    page: 0,
+    list: []
   },
 
-  makeRequest() {
+  onLoad: function (options) {
+    this.makeRequest(this.data.page)
+  },
+
+  onReachBottom: function () {
+    console.log('reach bottom');
+  },
+
+  goToWebView: function (e) {
+    const i = parseInt(e.currentTarget.dataset.index)
+    wx.navigateTo({
+      url: '../webview/webview?url='+ this.data.list[i].link,
+    })
+  },
+
+  makeRequest(page) {
     const self = this
 
     self.setData({
@@ -15,11 +31,11 @@ Page({
     })
 
     wx.request({
-      url: homeUrl,
+      url: homeUrl + '/' + page + '/json',
       success(result) {
         const list = result.data.data.datas
         self.setData({
-          list
+          list : list
         })
         self.setData({
           loading: false

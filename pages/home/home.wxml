@@ -1,11 +1,15 @@
 <view class="container">
-	<scroll-view>
-		<view class="item-home" wx:for="{{list}}" wx:key="item">
+	<view style="width:100%; padding:0; margin:0">
+		<view class="item-home" wx:for="{{list}}" wx:key="item" bindtap="goToWebView" data-index='{{index}}'>
 			<text class="text-title">{{item.title}}</text>
+			<view wx:if='{{item.desc.length != 0}}' class="home-item-middle">
+				<text class="{{item.envelopePic.length == 0 ? 'text-desc1' : 'text-desc'}}">{{item.desc}}</text>
+				<image class="item-envelope" mode="aspectFill" src="{{item.envelopePic}}"></image>
+			</view>
 			<view class="home-item-bottom">
 				<text class="text-author">{{item.shareUser}}</text>
 				<text class="text-date">{{item.niceShareDate}}</text>
 			</view>
 		</view>
-	</scroll-view>
+	</view>
 </view>
